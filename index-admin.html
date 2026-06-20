@@ -90,6 +90,15 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
   width:100%;
 }
 .preview-btn:hover{background:rgba(255,255,255,.12);color:#fff}
+.reset-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:transparent;color:rgba(193,18,31,.85);
+  border-radius:8px;padding:11px;font-family:var(--f);font-size:.85rem;
+  font-weight:600;cursor:pointer;text-decoration:none;
+  transition:all .2s;border:1px solid rgba(193,18,31,.35);
+  width:100%;margin-top:10px;
+}
+.reset-btn:hover{background:rgba(193,18,31,.12);color:#e23b4a;border-color:rgba(193,18,31,.6)}
 
 /* ── MAIN ── */
 .main{margin-right:260px;min-height:100vh;padding:32px 36px}
@@ -271,10 +280,14 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
       </a>
     </div>
     <div class="sidebar-bottom">
-      <a href="mossek-avi-tzalach.html" target="_blank" class="preview-btn">
+      <a href="index.html" target="_blank" class="preview-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         צפה באתר
       </a>
+      <button type="button" class="reset-btn" onclick="resetDefaults()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.36 2.64L3 8"/><path d="M3 3v5h5"/></svg>
+        איפוס לברירת מחדל
+      </button>
     </div>
   </aside>
 
@@ -733,6 +746,17 @@ function showToast(msg){
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(function(){ t.classList.remove('show'); }, 3200);
+}
+
+// ════════════════════════════════
+// RESET TO DEFAULTS
+// ════════════════════════════════
+function resetDefaults(){
+  if(!confirm('פעולה זו תמחק את כל השינויים המקומיים ששמרת (טלפון, טקסטים, תמונות והצגת מקטעים) ותחזיר את האתר לברירת המחדל. להמשיך?')) return;
+  localStorage.removeItem('mossek_admin');
+  state = {sections:{}, texts:{}, images:{}};
+  showToast('✓ אופס לברירת מחדל — טוען מחדש...');
+  setTimeout(function(){ location.reload(); }, 900);
 }
 </script>
 </body>
