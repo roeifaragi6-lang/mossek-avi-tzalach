@@ -339,6 +339,8 @@ h3.wtitle{font-size:1.05rem;font-weight:800;color:var(--ltxt);margin-bottom:10px
 #reviews h2.st .a{color:var(--gold)}
 .reviews-inner{max-width:1100px}
 .reviews-inner [class*="elfsight-app-"]{min-height:420px}
+/* Force RTL inside the Elfsight Google Reviews widget (it renders LTR by default) */
+.reviews-inner [class*="elfsight-app-"] *{direction:rtl !important}
 
 /* ── SECTION TRANSITIONS ── */
 #why + #reviews{margin-top:0}
