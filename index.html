@@ -333,39 +333,11 @@ h3.wtitle{font-size:1.05rem;font-weight:800;color:var(--ltxt);margin-bottom:10px
 .wdesc{font-size:.88rem;color:var(--ltxt2);line-height:1.72}
 
 /* ── TESTIMONIALS ── */
-#reviews{background:var(--light2)}
+#reviews{background:var(--dark);padding:80px 48px}
 #reviews .tag{color:var(--gold)}
-#reviews h2.st{color:var(--ltxt)}
+#reviews h2.st{color:#fff}
 #reviews h2.st .a{color:var(--gold)}
-.rcards{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;
-}
-.rcard{
-  background:#fff;border:1px solid var(--border-l);
-  border-radius:14px;padding:32px;
-  display:flex;flex-direction:column;transition:all .3s var(--ease);
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
-}
-.rcard:hover{border-color:rgba(200,150,12,.3);transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.1)}
-.stars{color:var(--gold);font-size:.95rem;letter-spacing:3px;margin-bottom:16px}
-.rtext{
-  font-size:.92rem;color:var(--ltxt2);line-height:1.78;
-  margin-bottom:22px;font-style:italic;flex:1;
-}
-.rauthor{display:flex;align-items:center;gap:12px}
-.rav{
-  width:44px;height:44px;border-radius:50%;
-  background:var(--light3);border:1px solid var(--border-l2);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:800;font-size:1rem;color:var(--gold);flex-shrink:0;
-}
-.rname{font-weight:700;font-size:.9rem;color:var(--ltxt)}
-.rmeta{font-size:.76rem;color:var(--ltxt2);margin-top:2px}
-.gbadge{
-  display:flex;align-items:center;gap:6px;font-size:.74rem;
-  color:var(--ltxt2);margin-top:20px;padding-top:16px;
-  border-top:1px solid var(--border-l);
-}
+.reviews-inner{max-width:1100px}
 
 /* ── SECTION TRANSITIONS ── */
 #why + #reviews{margin-top:0}
@@ -627,7 +599,6 @@ footer{
   .checks{grid-template-columns:1fr}
   .vcards{grid-template-columns:repeat(2,1fr)}
   .wcards{grid-template-columns:1fr}
-  .rcards{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:44px;padding-bottom:60px}
   .wa-fab{display:flex}
   .waze-fab{display:flex}
@@ -797,6 +768,20 @@ footer{
     </div>
   </div>
 </div>
+
+<!-- ═══════════════ REVIEWS ═══════════════ -->
+<section id="reviews" data-section="reviews" aria-labelledby="rev-h">
+  <div class="inner reviews-inner">
+    <div class="sec-head rv" style="margin-bottom:40px">
+      <span class="tag">מה אומרים עלינו</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="rev-h">הלקוחות <span class="a">מדברים בעצמם</span></h2>
+    </div>
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+    <div class="elfsight-app-57a82337-667f-40bd-96b2-b6d0f9319a53" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
 <section id="about" data-section="about" aria-labelledby="about-h">
   <div class="inner">
     <div class="about-grid">
@@ -1060,18 +1045,6 @@ footer{
 </section>
 
 <!-- ═══════════════ REVIEWS ═══════════════ -->
-<section id="reviews" data-section="reviews" aria-labelledby="rev-h">
-  <div class="inner">
-    <div class="sec-head rv">
-      <span class="tag">מה אומרים עלינו</span>
-      <div class="divider" style="margin:14px auto 18px"></div>
-      <h2 class="st" id="rev-h">הלקוחות <span class="a">מדברים בעצמם</span></h2>
-    </div>
-    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-    <div class="elfsight-app-57a82337-667f-40bd-96b2-b6d0f9319a53" data-elfsight-app-lazy></div>
-  </div>
-</section>
-
 <!-- ═══════════════ FAQ ═══════════════ -->
 <section id="faq" data-section="faq" aria-labelledby="faq-h" style="background:var(--light)">
   <div class="inner" style="max-width:780px">
