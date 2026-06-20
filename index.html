@@ -1266,6 +1266,12 @@ footer{
 
   // ── Hamburger / mobile menu ──
   var hbg=document.getElementById('hbg'),nl=document.getElementById('navLinks');
+  function closeMenu(){
+    nl.classList.remove('open');
+    hbg.classList.remove('active');
+    hbg.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
   hbg.addEventListener('click',function(){
     var open=nl.classList.toggle('open');
     hbg.classList.toggle('active',open);
@@ -1273,13 +1279,14 @@ footer{
     document.body.style.overflow=open?'hidden':'';
   });
   nl.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      nl.classList.remove('open');
-      hbg.classList.remove('active');
-      hbg.setAttribute('aria-expanded','false');
-      document.body.style.overflow='';
-    });
+    a.addEventListener('click',closeMenu);
   });
+  // Close the menu on any scroll attempt (body scroll is locked while open,
+  // so wheel/touchmove are the reliable signals)
+  function closeOnScroll(){ if(nl.classList.contains('open')) closeMenu(); }
+  window.addEventListener('scroll',closeOnScroll,{passive:true});
+  window.addEventListener('wheel',closeOnScroll,{passive:true});
+  window.addEventListener('touchmove',closeOnScroll,{passive:true});
 
   // ── Hero parallax ──
   var hbgEl=document.getElementById('hbg-bg');
