@@ -75,6 +75,15 @@ body{font-family:var(--f);background:var(--black);color:var(--white);direction:r
 .nav-links a:hover::after{width:100%}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;justify-self:start}
 .hline{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.nav-right{display:flex;align-items:center;gap:14px;justify-self:end}
+.nav-ig{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  color:var(--wmid);text-decoration:none;
+  border:1px solid rgba(255,255,255,.14);
+  transition:color .22s,border-color .22s,background .22s,transform .22s;
+}
+.nav-ig:hover{color:var(--gold);border-color:rgba(200,150,12,.4);background:rgba(200,150,12,.08);transform:translateY(-2px)}
 
 /* ── HERO ── */
 #hero{
@@ -668,9 +677,18 @@ footer{
     <li><a href="#vehicles">סוגי טיפולים</a></li>
     <li><a href="#contact">איך להגיע</a></li>
   </ul>
-  <button class="hamburger" id="hbg" aria-label="פתח תפריט" aria-expanded="false">
-    <span class="hline"></span><span class="hline"></span><span class="hline"></span>
-  </button>
+  <div class="nav-right">
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="nav-ig" aria-label="עקבו אחרינו באינסטגרם">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+    <button class="hamburger" id="hbg" aria-label="פתח תפריט" aria-expanded="false">
+      <span class="hline"></span><span class="hline"></span><span class="hline"></span>
+    </button>
+  </div>
 </nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
