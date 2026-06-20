@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="מוסך אבי צלח – מקצועיות, אמינות וניסיון של מעל 30 שנה. שירות אישי וטיפול מקצועי לכל סוגי הרכבים. בן שמן 5, תל אביב.">
+<meta name="keywords" content="מוסך תל אביב, תיקון רכב, טיפול רכב, מכונאי מקצועי, מוסך שירות">
+<meta property="og:title" content="מוסך אבי צלח | מוסך מקצועי בתל אביב">
+<meta property="og:description" content="30+ שנות ניסיון, שקיפות מלאה, יחס אישי. בן שמן 5, תל אביב.">
+<meta property="og:type" content="website">
+<title>מוסך אבי צלח | מוסך מקצועי בתל אביב – 30+ שנות ניסיון</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#060608;
+  --dark:#0e1016;
+  --dark2:#171a22;
+  --dark3:#1e2130;
+  --light:#f4f2ee;
+  --light2:#eceae5;
+  --light3:#e2dfd9;
+  --ltxt:#1a1c24;
+  --ltxt2:#4a4d5a;
+  --gold:#c8960c;
+  --gold2:#daa918;
+  --goldfade:rgba(200,150,12,.12);
+  --goldfade-l:rgba(200,150,12,.14);
+  --red:#c1121f;
+  --red2:#a50e1a;
+  --white:#f0ede8;
+  --wmid:rgba(240,237,232,.72);
+  --wfaint:rgba(240,237,232,.38);
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.12);
+  --border-l:rgba(26,28,36,.1);
+  --border-l2:rgba(26,28,36,.16);
+  --f:'Heebo',sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--black);color:var(--white);direction:rtl;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── NAVBAR ── */
+#nav{
+  position:fixed;top:0;inset-inline:0;z-index:900;
+  height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:0 48px;
+  transition:all .4s var(--ease);
+}
+#nav.scrolled{
+  background:rgba(6,6,8,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  height:64px;
+}
+.nav-logo{
+  font-weight:900;font-size:1.22rem;letter-spacing:-.3px;
+  color:var(--white);text-decoration:none;
+  white-space:nowrap;justify-self:start;
+}
+.nav-logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;justify-self:center}
+.nav-links a{
+  color:var(--wmid);text-decoration:none;font-size:.9rem;font-weight:600;
+  position:relative;transition:color .2s;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;right:0;
+  width:0;height:1.5px;background:var(--gold);transition:width .3s var(--ease);
+}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;justify-self:start}
+.hline{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+
+/* ── HERO ── */
+#hero{
+  position:relative;height:100vh;min-height:660px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(170deg,rgba(6,6,8,.55) 0%,rgba(6,6,8,.72) 55%,rgba(6,6,8,.92) 100%),
+    url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  transform-origin:center;transition:transform .08s linear;will-change:transform;
+}
+.hero-c{position:relative;z-index:2;max-width:860px;padding:0 28px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(200,150,12,.14);border:1px solid rgba(200,150,12,.32);
+  color:var(--gold2);font-size:.85rem;font-weight:700;
+  padding:9px 20px;border-radius:50px;margin-bottom:30px;
+  backdrop-filter:blur(8px);letter-spacing:.2px;
+}
+.hero-badge svg{flex-shrink:0}
+h1.hero-title{
+  font-size:clamp(2rem,5.2vw,3.8rem);font-weight:900;
+  line-height:1.14;letter-spacing:-1.2px;
+  color:var(--white);margin-bottom:18px;
+}
+h1.hero-title .g{color:var(--gold)}
+/* desktop: all on natural flow with dash between brand and rest */
+.ht-brand::after{content:' –';color:var(--wmid)}
+.ht-brand,.ht-mid,.ht-end{display:inline}
+.hero-sub{
+  font-size:clamp(.95rem,2vw,1.18rem);color:var(--wmid);
+  font-weight:400;line-height:1.8;
+  max-width:580px;margin:0 auto 38px;
+}
+.hero-btns{
+  display:flex;flex-wrap:wrap;gap:14px;
+  justify-content:center;margin-bottom:20px;
+}
+.btn-red{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--red);color:var(--white);font-family:var(--f);
+  font-size:1rem;font-weight:700;padding:15px 36px;border-radius:8px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background .22s,transform .22s,box-shadow .22s;
+}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(193,18,31,.42)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.07);color:var(--white);font-family:var(--f);
+  font-size:1rem;font-weight:600;padding:14px 36px;border-radius:8px;
+  text-decoration:none;border:1.5px solid rgba(240,237,232,.28);
+  transition:border-color .22s,color .22s,transform .22s,background .22s;
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);background:rgba(200,150,12,.07)}
+.btn-waze{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+  color:var(--wmid);font-size:.85rem;font-weight:600;
+  padding:9px 20px;border-radius:50px;text-decoration:none;
+  transition:all .22s;backdrop-filter:blur(8px);
+}
+.btn-waze:hover{background:rgba(0,183,255,.14);border-color:rgba(0,183,255,.35);color:#40c8ff}
+
+/* Hero phone number — desktop only, plain text display */
+.hero-desktop-cta{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.hero-cta-label{
+  font-size:.82rem;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;color:var(--wmid);
+}
+.hero-phone-display{
+  display:inline-flex;align-items:center;
+  text-decoration:none;cursor:default;pointer-events:none;
+  background:#25a244;
+  padding:13px 32px;
+  border-radius:10px;
+}
+.hero-phone-display:hover{transform:none}
+.hero-phone-icon{display:none}
+.hero-phone-num{
+  font-size:1.75rem;font-weight:900;
+  color:var(--white);letter-spacing:1.5px;
+  font-feature-settings:"tnum";
+  direction:ltr;
+}
+/* mobile elements hidden on desktop */
+.hero-call-mobile{display:none}
+.hero-mobile-label{
+  display:none;font-size:.82rem;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--wmid);text-align:center;
+}
+.hero-waze-btn{display:none!important}
+.scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  color:var(--wfaint);font-size:.7rem;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;animation:bobble 2.2s ease-in-out infinite;z-index:2;
+}
+@keyframes bobble{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+
+/* ── STATS ── */
+#stats{
+  background:#13151e;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:44px 48px;
+}
+.stats-row{
+  max-width:1080px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+}
+.stat{
+  text-align:center;padding:14px 20px;
+  border-inline-start:1px solid var(--border);
+}
+.stat:last-child{border-inline-start:none}
+.stat-n{
+  font-size:2.6rem;font-weight:900;color:var(--gold);
+  line-height:1;margin-bottom:7px;
+}
+.stat-l{font-size:.85rem;color:var(--wmid);font-weight:500}
+
+/* ── SECTION BASE ── */
+section{padding:96px 48px}
+.inner{max-width:1080px;margin:0 auto}
+.tag{
+  display:inline-block;color:var(--gold);font-size:.92rem;
+  font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;
+}
+h2.st{
+  font-size:clamp(2rem,3.4vw,2.85rem);font-weight:900;
+  line-height:1.2;letter-spacing:-.6px;color:var(--white);margin-bottom:18px;
+}
+h2.st .a{color:var(--gold)}
+.sdesc{
+  font-size:1.02rem;color:var(--wmid);line-height:1.82;max-width:560px;
+}
+
+/* ── ABOUT ── */
+#about{background:var(--dark)}
+.about-grid{
+  display:grid;grid-template-columns:1.1fr 0.9fr;
+  gap:72px;align-items:center;
+}
+.img-wrap{position:relative}
+.img-wrap img{
+  width:100%;border-radius:14px;height:500px;
+  object-fit:cover;filter:brightness(.88) saturate(.9);
+  display:block;
+}
+.img-badge{
+  position:absolute;bottom:-22px;right:-22px;
+  background:var(--gold);color:var(--black);
+  font-weight:900;padding:20px 26px;border-radius:12px;
+  text-align:center;line-height:1.25;
+}
+.img-badge strong{font-size:2.4rem;display:block}
+.img-badge span{font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.about-body p{
+  font-size:1.02rem;color:var(--wmid);line-height:1.88;margin-bottom:20px;
+}
+.checks{
+  display:grid;grid-template-columns:1fr;gap:10px;margin-top:30px;
+}
+.check{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;background:var(--dark2);
+  border:1px solid var(--border);border-radius:10px;
+}
+.check-icon{
+  width:30px;height:30px;border-radius:7px;flex-shrink:0;
+  background:var(--goldfade);display:flex;align-items:center;justify-content:center;
+  color:var(--gold);
+}
+.check-text{font-size:.95rem;color:var(--wmid);font-weight:500;line-height:1.4}
+
+/* ── VEHICLES ── */
+#vehicles{
+  position:relative;
+  background:
+    linear-gradient(to bottom,
+      var(--black) 0%,
+      rgba(6,6,8,.78) 12%,
+      rgba(6,6,8,.78) 88%,
+      var(--black) 100%
+    ),
+    url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80')
+    center/cover no-repeat;
+}
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-head .sdesc{margin:0 auto}
+.vcards{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+}
+.vcards-3{grid-template-columns:repeat(3,1fr)}
+.vcard{
+  background:rgba(14,16,22,.82);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;padding:38px 24px;text-align:center;
+  transition:all .3s var(--ease);cursor:default;
+}
+.vcard:hover{
+  border-color:rgba(200,150,12,.55);
+  transform:translateY(-7px);
+  background:rgba(30,33,48,.9);
+  box-shadow:0 24px 48px rgba(0,0,0,.55);
+}
+.vcard svg{width:58px;height:58px;margin:0 auto 22px;color:var(--gold)}
+h3.vname{font-size:1.1rem;font-weight:800;color:var(--white);margin-bottom:10px}
+.vdesc{font-size:.86rem;color:var(--wmid);line-height:1.65}
+
+/* ── WHY ── */
+#why{background:var(--light)}
+#why .tag{color:var(--gold)}
+#why h2.st{color:var(--ltxt)}
+#why h2.st .a{color:var(--gold)}
+.wcards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;
+}
+.wcard{
+  padding:38px 30px;border:1px solid var(--border-l);
+  border-radius:14px;background:#fff;
+  position:relative;overflow:hidden;transition:all .3s var(--ease);
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.wcard::after{
+  content:'';position:absolute;top:0;right:0;
+  width:3px;height:0;background:var(--gold);
+  transition:height .45s var(--ease);
+}
+.wcard:hover{transform:translateY(-4px);border-color:rgba(200,150,12,.3);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.wcard:hover::after{height:100%}
+.wicon{
+  width:50px;height:50px;border-radius:12px;
+  background:var(--goldfade-l);border:1px solid rgba(200,150,12,.22);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.wicon svg{width:24px;height:24px;color:var(--gold)}
+h3.wtitle{font-size:1.05rem;font-weight:800;color:var(--ltxt);margin-bottom:10px}
+.wdesc{font-size:.88rem;color:var(--ltxt2);line-height:1.72}
+
+/* ── TESTIMONIALS ── */
+#reviews{background:var(--light2)}
+#reviews .tag{color:var(--gold)}
+#reviews h2.st{color:var(--ltxt)}
+#reviews h2.st .a{color:var(--gold)}
+.rcards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;
+}
+.rcard{
+  background:#fff;border:1px solid var(--border-l);
+  border-radius:14px;padding:32px;
+  display:flex;flex-direction:column;transition:all .3s var(--ease);
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+.rcard:hover{border-color:rgba(200,150,12,.3);transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.1)}
+.stars{color:var(--gold);font-size:.95rem;letter-spacing:3px;margin-bottom:16px}
+.rtext{
+  font-size:.92rem;color:var(--ltxt2);line-height:1.78;
+  margin-bottom:22px;font-style:italic;flex:1;
+}
+.rauthor{display:flex;align-items:center;gap:12px}
+.rav{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--light3);border:1px solid var(--border-l2);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1rem;color:var(--gold);flex-shrink:0;
+}
+.rname{font-weight:700;font-size:.9rem;color:var(--ltxt)}
+.rmeta{font-size:.76rem;color:var(--ltxt2);margin-top:2px}
+.gbadge{
+  display:flex;align-items:center;gap:6px;font-size:.74rem;
+  color:var(--ltxt2);margin-top:20px;padding-top:16px;
+  border-top:1px solid var(--border-l);
+}
+
+/* ── SECTION TRANSITIONS ── */
+#why + #reviews{margin-top:0}
+#vehicles{border-top:1px solid var(--border)}
+#contact{border-top:4px solid var(--light2)}
+#contact{background:var(--dark);padding-bottom:0}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;gap:64px;
+  align-items:start;padding-bottom:80px;
+}
+.cdet{display:flex;align-items:flex-start;gap:18px;margin-bottom:30px}
+.cdet-icon{
+  width:50px;height:50px;border-radius:13px;flex-shrink:0;
+  background:var(--goldfade);border:1px solid rgba(200,150,12,.18);
+  display:flex;align-items:center;justify-content:center;
+}
+.cdet-icon svg{width:22px;height:22px;color:var(--gold)}
+.cdet-lbl{font-size:.72rem;color:var(--wmid);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+.cdet-val{font-size:1.1rem;font-weight:700;color:var(--white);line-height:1.4}
+.cdet-val a{color:var(--white);text-decoration:none;transition:color .2s}
+.cdet-val a:hover{color:var(--gold)}
+.cdet-sub{font-size:.84rem;color:var(--wmid);margin-top:3px}
+.cbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+/* Contact phone display — desktop */
+.contact-phone-display{
+  display:flex;align-items:center;gap:16px;
+}
+.contact-phone-icon{
+  width:48px;height:48px;border-radius:12px;flex-shrink:0;
+  background:#25a244;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.contact-phone-label{
+  font-size:.72rem;color:var(--wmid);font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;
+}
+.contact-phone-num{
+  font-size:1.6rem;font-weight:900;color:var(--white);
+  letter-spacing:.5px;direction:ltr;font-feature-settings:"tnum";
+}
+.contact-mobile-btn{display:none}
+.map-box{border-radius:14px;overflow:hidden;height:460px;border:1px solid var(--border)}
+.map-box iframe{width:100%;height:100%;border:none;display:block}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--black);
+  border-top:1px solid var(--border);
+  padding:28px 48px;
+}
+.foot-inner{
+  max-width:1080px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.foot-copy{font-size:.82rem;color:var(--wmid)}
+.foot-copy a{color:var(--gold);text-decoration:none}
+.foot-copy em{color:var(--gold);font-style:normal}
+
+/* ── WHATSAPP FAB (mobile only) ── */
+.wa-fab{
+  display:none;position:fixed;
+  bottom:112px;left:16px;right:auto;z-index:800;
+  width:50px;height:50px;border-radius:50%;
+  background:#25D366;text-decoration:none;
+  align-items:center;justify-content:center;
+  box-shadow:0 2px 10px rgba(37,211,102,.5);
+  opacity:.88;
+  transition:opacity .2s;
+}
+.wa-fab:active{opacity:1;transform:scale(.94)}
+/* ── WAZE FAB (mobile only) ── */
+.waze-fab{
+  display:none;position:fixed;
+  bottom:50px;left:16px;right:auto;z-index:800;
+  width:50px;height:50px;border-radius:50%;
+  background:#fff;text-decoration:none;
+  align-items:center;justify-content:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  overflow:hidden;
+  opacity:.88;
+  transition:opacity .2s;
+}
+.waze-fab:active{opacity:1;transform:scale(.94)}
+
+/* ── GOOGLE RATING IN HERO ── */
+.hero-grating{
+  display:inline-flex;align-items:center;gap:14px;
+  background:rgba(255,255,255,.09);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);border-radius:50px;
+  padding:10px 20px;margin-bottom:32px;
+}
+.grating-stars{color:#f9ab00;font-size:1rem;letter-spacing:2px}
+.grating-text{display:flex;align-items:baseline;gap:6px}
+.grating-score{font-size:1.1rem;font-weight:900;color:var(--white)}
+.grating-label{font-size:.8rem;font-weight:600;color:var(--wmid)}
+.grating-count{font-size:.78rem;color:var(--wfaint)}
+.grating-logo{display:flex;align-items:center}
+
+/* ── TRUST BAR ── */
+#trustbar{background:#111318;border-bottom:1px solid var(--border);padding:20px 48px}
+.tbar-inner{
+  max-width:1080px;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:0;
+}
+.tbar-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 28px;color:var(--wmid);font-size:.88rem;font-weight:600;
+}
+.tbar-item svg{color:var(--gold);flex-shrink:0}
+.tbar-sep{width:1px;height:28px;background:var(--border2)}
+
+/* ── PROCESS ── */
+.process-steps{
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr;
+  align-items:start;gap:0;margin-top:56px;
+}
+.pstep{
+  background:#fff;border:1px solid var(--border-l);border-radius:14px;
+  padding:32px 28px;box-shadow:0 2px 12px rgba(0,0,0,.06);
+  transition:box-shadow .3s;
+}
+.pstep:hover{box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.pnum{
+  font-size:2.8rem;font-weight:900;color:rgba(200,150,12,.18);
+  line-height:1;margin-bottom:16px;
+}
+.pstep-title{font-size:1rem;font-weight:800;color:var(--ltxt);margin-bottom:10px}
+.pstep-desc{font-size:.88rem;color:var(--ltxt2);line-height:1.7}
+.pstep-arrow{
+  font-size:1.8rem;color:var(--gold);
+  align-self:center;padding:0 8px;margin-top:-20px;opacity:.5;
+}
+.process-cta{display:none!important}
+
+/* ── TEAM ── */
+.team-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.tmember{
+  border-radius:14px;overflow:hidden;
+  background:var(--dark2);border:1px solid var(--border);
+  transition:transform .3s var(--ease),box-shadow .3s;
+}
+.tmember:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.tmember-img-wrap{
+  height:260px;overflow:hidden;
+}
+.tmember-img-wrap img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  filter:brightness(.85) saturate(.9);
+  transition:transform .5s var(--ease);display:block;
+}
+.tmember:hover .tmember-img-wrap img{transform:scale(1.04)}
+.tmember-info{padding:22px 22px 26px}
+.tmember-name{font-size:1.08rem;font-weight:800;color:var(--white);margin-bottom:5px}
+.tmember-role{
+  display:inline-block;font-size:.76rem;font-weight:700;
+  color:var(--gold);letter-spacing:.5px;margin-bottom:12px;
+}
+.tmember-bio{font-size:.86rem;color:var(--wmid);line-height:1.65}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{border-radius:12px;overflow:hidden;border:1px solid var(--border-l);background:#fff}
+.faq-q{
+  width:100%;text-align:right;padding:20px 24px;
+  font-family:var(--f);font-size:1rem;font-weight:700;color:var(--ltxt);
+  background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--gold)}
+.faq-q::after{
+  content:'＋';font-size:1.1rem;color:var(--gold);
+  flex-shrink:0;transition:transform .3s;
+}
+.faq-q[aria-expanded="true"]::after{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  font-size:.93rem;color:var(--ltxt2);line-height:1.75;
+  padding:0 24px;transition:max-height .35s var(--ease),padding .35s;
+}
+.faq-a.open{max-height:200px;padding:0 24px 20px}
+
+/* ── STICKY MOBILE BAR ── */
+.sticky-bar{
+  display:none;
+  position:fixed;bottom:0;inset-inline:0;z-index:850;
+  background:rgba(6,6,8,.97);backdrop-filter:blur(16px);
+  border-top:1px solid var(--border2);
+  padding:12px 16px 18px;
+  grid-template-columns:1fr 1fr;gap:10px;
+}
+.sticky-bar a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px;border-radius:9px;
+  font-family:var(--f);font-size:.88rem;font-weight:700;
+  text-decoration:none;transition:opacity .2s;
+}
+.sticky-bar a:active{opacity:.8}
+.sticky-call{background:var(--red);color:#fff}
+.sticky-wa{background:#25D366;color:#fff}
+
+/* ── RESPONSIVE NEW SECTIONS ── */
+@media(max-width:900px){
+  .process-steps{grid-template-columns:1fr;gap:16px}
+  .pstep-arrow{display:none}
+  .team-grid{grid-template-columns:1fr}
+  .tbar-inner{flex-direction:column;align-items:flex-start;gap:8px;padding:0}
+  .tbar-sep{display:none}
+  #trustbar{padding:18px 24px}
+  .contact-phone-display{display:none}
+  .contact-mobile-btn{display:inline-flex}
+}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.show{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── DIVIDER ── */
+.divider{width:48px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:24px}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  section{padding:72px 24px}
+  #nav{padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+  .nav-logo{justify-self:unset}
+  .nav-links{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(6,6,8,.99);
+    z-index:1000;
+    flex-direction:column;justify-content:center;
+    padding:40px 32px;
+    list-style:none;gap:0;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{
+    font-size:1.5rem;font-weight:800;color:rgba(240,237,232,.7);
+    padding:20px 0;border-bottom:1px solid rgba(255,255,255,.07);
+    display:block;transition:color .2s;
+    text-decoration:none;
+  }
+  .nav-links a:hover{color:var(--gold)}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-call{display:none}
+  .hamburger{display:flex;z-index:1100;position:relative;flex-direction:column;gap:5px}
+  .hamburger.active .hline:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.active .hline:nth-child(2){opacity:0;transform:scaleX(0)}
+  .hamburger.active .hline:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  #stats{padding:32px 20px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-inline-start:none}
+  .stat:nth-child(3){border-top:1px solid var(--border);border-inline-start:1px solid var(--border)}
+  .stat:nth-child(4){border-top:1px solid var(--border);border-inline-start:none}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .img-wrap img{height:280px}
+  .img-badge{bottom:14px;right:14px}
+  .checks{grid-template-columns:1fr}
+  .vcards{grid-template-columns:repeat(2,1fr)}
+  .wcards{grid-template-columns:1fr}
+  .rcards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:44px;padding-bottom:60px}
+  .wa-fab{display:flex}
+  .waze-fab{display:flex}
+  footer{padding:24px 20px}
+  .foot-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:540px){
+  .vcards{grid-template-columns:1fr}
+  /* hero title — mobile layout */
+  h1.hero-title{
+    font-size:1rem;letter-spacing:0;
+    line-height:1;margin-bottom:20px;
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .ht-brand{
+    display:block;font-size:2.4rem;font-weight:900;
+    letter-spacing:-1px;line-height:1.1;color:var(--white);
+  }
+  .ht-brand::after{display:none}
+  .ht-mid{
+    display:block;font-size:1.6rem;font-weight:700;
+    letter-spacing:-.3px;line-height:1.25;
+    color:rgba(240,237,232,.82);margin-top:6px;
+  }
+  .ht-end{
+    display:block;font-size:1.6rem;font-weight:700;
+    letter-spacing:-.3px;line-height:1.25;
+    color:rgba(240,237,232,.82);
+  }
+  /* buttons */
+  .hero-desktop-cta{display:none}
+  .hero-call-mobile{display:inline-flex}
+  .hero-mobile-label{display:block}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn-red,.btn-outline{width:100%;max-width:300px;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav id="nav" role="navigation" aria-label="ניווט ראשי">
+  <a href="#hero" class="nav-logo" aria-label="מוסך אבי צלח – דף הבית">מוסך <em>אבי צלח</em></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">בית</a></li>
+    <li><a href="#about">על המוסך</a></li>
+    <li><a href="#vehicles">סוגי טיפולים</a></li>
+    <li><a href="#contact">איך להגיע</a></li>
+  </ul>
+  <button class="hamburger" id="hbg" aria-label="פתח תפריט" aria-expanded="false">
+    <span class="hline"></span><span class="hline"></span><span class="hline"></span>
+  </button>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero" aria-label="כותרת ראשית">
+  <div class="hero-bg" id="hbg-bg" aria-hidden="true"></div>
+  <div class="hero-c">
+    <div class="hero-badge" aria-label="כתובת המוסך">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 21c-4.418-4.418-7-7.582-7-11a7 7 0 0114 0c0 3.418-2.582 6.582-7 11z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span data-txt="address">בן שמן 5, תל אביב</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="ht-brand" data-txt="biz-name">מוסך אבי צלח</span>
+      <span class="ht-mid">מקצועיות, אמינות</span>
+      <span class="ht-end">וניסיון של מעל <span class="g">30 שנה</span></span>
+    </h1>
+    <p class="hero-sub">שירות מקצועי, יחס אישי ואחריות מלאה על כל טיפול.<br>כי הרכב שלך בידיים הנכונות — שווה שקט נפשי אמיתי.</p>
+    <!-- Google Rating -->
+    <div class="hero-grating rv">
+      <div class="grating-stars">★★★★★</div>
+      <div class="grating-text">
+        <span class="grating-score">4.9</span>
+        <span class="grating-label">דירוג גוגל</span>
+        <span class="grating-count">· 180+ ביקורות</span>
+      </div>
+      <div class="grating-logo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z" fill="#4285F4"/></svg>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <!-- Desktop: טקסט + מספר טלפון -->
+      <div class="hero-desktop-cta">
+        <span class="hero-cta-label">לקבלת הצעת מחיר התקשרו</span>
+        <a href="tel:03-6877439" data-href-phone class="hero-phone-display" aria-label="מספר טלפון המוסך">
+          <span class="hero-phone-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+          </span>
+          <span class="hero-phone-num" data-txt="phone">03-6877439</span>
+        </a>
+      </div>
+      <!-- Mobile only: כיתוב + כפתור -->
+      <span class="hero-mobile-label">לקבלת הצעת מחיר חייגו עכשיו</span>
+      <a href="tel:03-6877439" data-href-phone class="btn-red hero-call-mobile" aria-label="התקשר למוסך עכשיו">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+        התקשר עכשיו
+      </a>
+    </div>
+    <a href="https://waze.com/ul?q=%D7%A9%D7%95%D7%A0%D7%A6%D7%99%D7%A0%D7%95+5+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91" target="_blank" rel="noopener noreferrer" class="btn-waze hero-waze-btn" aria-label="נווט ב-Waze למוסך אבי צלח">
+      <svg width="15" height="15" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><ellipse cx="32" cy="36" rx="26" ry="22"/><circle cx="22" cy="48" r="5" fill="var(--black)"/><circle cx="44" cy="48" r="5" fill="var(--black)"/><path d="M22 28a3 3 0 100 6 3 3 0 000-6zm20 0a3 3 0 100 6 3 3 0 000-6z" fill="var(--black)"/><path d="M24 38c2 4 14 4 16 0" stroke="var(--black)" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M38 10c0-4-6-8-6-8s-6 4-6 8a6 6 0 0012 0z" fill="currentColor" opacity=".5"/></svg>
+      נווט אלינו – Waze
+    </a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>גלול</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<div id="stats" role="region" aria-label="נתוני המוסך">
+  <div class="stats-row">
+    <div class="stat rv">
+      <div class="stat-n" data-target="30">0</div>
+      <div class="stat-l">שנות ניסיון במקצוע</div>
+    </div>
+    <div class="stat rv d1">
+      <div class="stat-n" data-target="5000" data-plus="1">0</div>
+      <div class="stat-l">לקוחות מרוצים ומעלה</div>
+    </div>
+    <div class="stat rv d2">
+      <div class="stat-n" data-target="15">0</div>
+      <div class="stat-l">סוגי טיפולים שונים</div>
+    </div>
+    <div class="stat rv d3">
+      <div class="stat-n">100%</div>
+      <div class="stat-l">אחריות מלאה על כל עבודה</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ TRUST BAR ═══════════════ -->
+<div id="trustbar" data-section="trustbar" role="region" aria-label="ערכי המוסך">
+  <div class="tbar-inner">
+    <div class="tbar-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>אחריות בכתב על כל עבודה</span>
+    </div>
+    <div class="tbar-sep" aria-hidden="true"></div>
+    <div class="tbar-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      <span>מחיר ידוע מראש — ללא הפתעות</span>
+    </div>
+    <div class="tbar-sep" aria-hidden="true"></div>
+    <div class="tbar-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <span>יחס אישי מהצוות ומאבי עצמו</span>
+    </div>
+    <div class="tbar-sep" aria-hidden="true"></div>
+    <div class="tbar-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>חלקים מקוריים בלבד</span>
+    </div>
+  </div>
+</div>
+<section id="about" data-section="about" aria-labelledby="about-h">
+  <div class="inner">
+    <div class="about-grid">
+      <!-- Text side — ראשון ב-HTML = עמודה ימנית ב-RTL -->
+      <div class="about-body rv">
+        <span class="tag">הסיפור שלנו</span>
+        <div class="divider"></div>
+        <h2 class="st" id="about-h">אבי צלח — <span class="a">שם שמזהים</span><br>בתל אביב</h2>
+        <p>לפני יותר משלושים שנה, אבי צלח פתח את המוסך שלו עם ידיים מלוכלכות, לב שלם ואמונה פשוטה: שבעל מוסך טוב צריך להתייחס לרכב של הלקוח — כאילו הוא שלו.</p>
+        <p>מאז, עשרות אלפי לקוחות עברו בשער שלנו. חלקם כבר מביאים אלינו את הילדים שלהם. אנחנו לא רק מתקנים רכבים — אנחנו בונים מערכת יחסים של אמון, עם שפה ברורה, מחירים שקופים ואחריות אמיתית.</p>
+        <p>הצוות שלנו מכיר כל תקלה, כל דגם, כל מנוע. ואנחנו לא ממהרים — כי עבודה טובה לוקחת את הזמן הנכון.</p>
+        <div class="checks">
+          <div class="check">
+            <div class="check-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="check-text">ציוד אבחון מתקדם לכל הדגמים</span>
+          </div>
+          <div class="check">
+            <div class="check-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="check-text">חלקים מקוריים ואיכותיים בלבד</span>
+          </div>
+          <div class="check">
+            <div class="check-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="check-text">שקיפות מלאה לפני כל תיקון</span>
+          </div>
+          <div class="check">
+            <div class="check-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="check-text">אחריות בכתב על כל עבודה</span>
+          </div>
+          <div class="check">
+            <div class="check-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div>
+            <span class="check-text">דיאגנוסטיקה מתקדמת לרכבי יוקרה ורכבים היברידיים</span>
+          </div>
+        </div>
+      </div>
+      <!-- Image side — שני ב-HTML = עמודה שמאלית ב-RTL -->
+      <div class="img-wrap rv d2">
+        <img
+          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" data-img="about-img"
+          alt="מכונאי מקצועי עובד על רכב במוסך אבי צלח בתל אביב"
+          loading="lazy" width="800" height="500"
+        >
+        <div class="img-badge" aria-label="30 שנות ניסיון">
+          <strong>+30</strong>
+          <span>שנות ניסיון</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section id="process" data-section="process" aria-labelledby="proc-h" style="background:var(--light);padding:80px 48px">
+  <div class="inner">
+    <div class="sec-head rv">
+      <span class="tag" style="color:var(--gold)">איך זה עובד</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="proc-h" style="color:var(--ltxt)">שלושה צעדים פשוטים —<br><span style="color:var(--gold)">ואתם חוזרים לנסוע בשקט</span></h2>
+    </div>
+    <div class="process-steps">
+      <div class="pstep rv d1">
+        <div class="pnum">01</div>
+        <div class="pstep-body">
+          <h3 class="pstep-title">מתקשרים ומספרים על הבעיה</h3>
+          <p class="pstep-desc">שיחה קצרה עם אבי או הצוות — מבינים מה קורה, קובעים תור מהיר ומסבירים מה לצפות.</p>
+        </div>
+      </div>
+      <div class="pstep-arrow" aria-hidden="true">←</div>
+      <div class="pstep rv d2">
+        <div class="pnum">02</div>
+        <div class="pstep-body">
+          <h3 class="pstep-title">אבחון מקצועי ואישור מחיר</h3>
+          <p class="pstep-desc">בודקים לעומק, מסבירים בדיוק מה נדרש — ורק לאחר אישורכם מתחילים לעבוד. ללא הפתעות.</p>
+        </div>
+      </div>
+      <div class="pstep-arrow" aria-hidden="true">←</div>
+      <div class="pstep rv d3">
+        <div class="pnum">03</div>
+        <div class="pstep-body">
+          <h3 class="pstep-title">מקבלים את הרכב — מוכן ומאושר</h3>
+          <p class="pstep-desc">מחזירים לכם רכב נקי, עם הסבר על מה בוצע ואחריות בכתב. ניתן לשאול כל שאלה.</p>
+        </div>
+      </div>
+    </div>
+    <div class="process-cta rv">
+      <a href="tel:03-6877439" data-href-phone class="btn-red" style="display:inline-flex;align-items:center;gap:10px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+        מתחילים עכשיו — 03-6877439
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TEAM ═══════════════ -->
+<section id="team" data-section="team" aria-labelledby="team-h" style="background:var(--dark)">
+  <div class="inner">
+    <div class="sec-head rv" style="margin-bottom:52px">
+      <span class="tag">הצוות שלנו</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="team-h">האנשים שעובדים <span class="a">בשבילכם</span></h2>
+      <p class="sdesc" style="margin:0 auto">מכונאים מקצועיים עם ניסיון אמיתי — שמדברים אליכם בגובה העיניים.</p>
+    </div>
+    <div class="team-grid">
+      <div class="tmember rv d1">
+        <div class="tmember-img-wrap">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45249ff78?auto=format&fit=crop&w=500&q=80" data-img="team-1"
+               alt="אבי צלח, בעלים ומנהל מוסך אבי צלח תל אביב" loading="lazy" width="500" height="500">
+        </div>
+        <div class="tmember-info">
+          <h3 class="tmember-name">אבי צלח</h3>
+          <span class="tmember-role">בעלים ומנהל המוסך</span>
+          <p class="tmember-bio">30+ שנות ניסיון. מכיר כל מנוע, כל תקלה. תמיד זמין לשאלה.</p>
+        </div>
+      </div>
+      <div class="tmember rv d2">
+        <div class="tmember-img-wrap">
+          <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6da11?auto=format&fit=crop&w=500&q=80" data-img="team-2"
+               alt="מכונאי מקצועי במוסך אבי צלח תל אביב" loading="lazy" width="500" height="500">
+        </div>
+        <div class="tmember-info">
+          <h3 class="tmember-name">יוסי בן דוד</h3>
+          <span class="tmember-role">מכונאי בכיר — מנועים ותיבות הילוכים</span>
+          <p class="tmember-bio">מומחה לרכבי יוקרה והיברידיים. 15 שנות ניסיון בשטח.</p>
+        </div>
+      </div>
+      <div class="tmember rv d3">
+        <div class="tmember-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=80" data-img="team-3"
+               alt="טכנאי חשמל רכב מוסך אבי צלח" loading="lazy" width="500" height="500">
+        </div>
+        <div class="tmember-info">
+          <h3 class="tmember-name">רמי שושן</h3>
+          <span class="tmember-role">טכנאי חשמל ודיאגנוסטיקה</span>
+          <p class="tmember-bio">מומחה לאבחון ממוחשב, חשמל ומערכות בקרה מתקדמות.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VEHICLES ═══════════════ -->
+<section id="vehicles" data-section="vehicles" aria-labelledby="veh-h">
+  <div class="inner">
+    <div class="sec-head rv">
+      <span class="tag">סוגי טיפולים</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="veh-h">כל סוג רכב — <span class="a">בידיים שיודעות</span></h2>
+      <p class="sdesc">מרכבים פרטיים ורכבי יוקרה — כולל דיאגנוסטיקה מתקדמת לרכבים היברידיים.</p>
+    </div>
+    <div class="vcards vcards-3">
+      <!-- רכב פרטי -->
+      <div class="vcard rv d1">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 36h48" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 36v-8l7-12h30l7 12v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 16l-5 12h40l-5-12" fill="currentColor" opacity=".1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M22 16h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="19" cy="43" r="5.5" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="45" cy="43" r="5.5" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="19" cy="43" r="2" fill="currentColor"/>
+          <circle cx="45" cy="43" r="2" fill="currentColor"/>
+          <path d="M8 32h4M52 32h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3 class="vname">רכב פרטי</h3>
+        <p class="vdesc">טיפולים שוטפים, מנוע, בלמים, חשמל ועוד — לכל מותגי הרכב הפרטי הנפוצים.</p>
+      </div>
+      <!-- יוקרה -->
+      <div class="vcard rv d2">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 34h52" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M9 34v-7l6-11h34l6 11v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 16l-4 11h42l-4-11" fill="currentColor" opacity=".1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M20 16h24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M6 30h5M53 30h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="18" cy="41" r="5.5" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="46" cy="41" r="5.5" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="18" cy="41" r="2" fill="currentColor"/>
+          <circle cx="46" cy="41" r="2" fill="currentColor"/>
+          <path d="M32 6l1.8 5h5.2l-4.2 3 1.6 5-4.4-3.2L27.6 19l1.6-5-4.2-3h5.2z" fill="currentColor" opacity=".55"/>
+        </svg>
+        <h3 class="vname">רכב יוקרה</h3>
+        <p class="vdesc">BMW, Mercedes, Audi, Lexus ועוד — עם הכלים הנכונים, הידע העמוק וההתייחסות שמגיעה לרכב פרימיום.</p>
+      </div>
+      <!-- דיאגנוסטיקה -->
+      <div class="vcard rv d3">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="8" y="12" width="48" height="34" rx="4" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M8 28h48" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M20 20h6M20 35h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="46" cy="20" r="5" stroke="currentColor" stroke-width="2"/>
+          <path d="M44 20l1.5 1.5L48 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 46v6M36 46v6M22 52h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M32 35v-5l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="32" cy="35" r="2.5" fill="currentColor"/>
+        </svg>
+        <h3 class="vname">דיאגנוסטיקה מתקדמת</h3>
+        <p class="vdesc">אבחון מחשב מקצועי לרכבי יוקרה ורכבים היברידיים — זיהוי מדויק של תקלות ופתרון יעיל.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY ═══════════════ -->
+<section id="why" data-section="why" aria-labelledby="why-h">
+  <div class="inner">
+    <div class="rv" style="max-width:560px">
+      <span class="tag">למה לבחור בנו</span>
+      <div class="divider"></div>
+      <h2 class="st" id="why-h">למה <span class="a">אלפי לקוחות</span><br>בוחרים במוסך אבי צלח?</h2>
+    </div>
+    <div class="wcards">
+      <!-- 1 -->
+      <div class="wcard rv d1">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="wtitle">מעל 30 שנות ניסיון</h3>
+        <p class="wdesc">עשרות שנות עבודה עם אלפי לקוחות ומאות דגמי רכב. אין מצב שלא ראינו — ואין בעיה שלא פתרנו.</p>
+      </div>
+      <!-- 2 -->
+      <div class="wcard rv d2">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="wtitle">שקיפות מלאה</h3>
+        <p class="wdesc">לפני כל תיקון — הסבר ברור על הבעיה, מה נדרש ומה יעלה. בלי הפתעות, בלי תוספות שלא סוכמו מראש.</p>
+      </div>
+      <!-- 3 -->
+      <div class="wcard rv d3">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="wtitle">אחריות בכתב</h3>
+        <p class="wdesc">כל עבודה מגובה באחריות מלאה בכתב. עשינו — אנחנו עומדים מאחוריה. זה לא הבטחה, זה הסטנדרט שלנו.</p>
+      </div>
+      <!-- 4 -->
+      <div class="wcard rv d1">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="wtitle">יחס אישי ואמיתי</h3>
+        <p class="wdesc">אנחנו זוכרים את הלקוחות שלנו — לא כמספרים, כאנשים. מגיעים עם שאלה, יוצאים עם תשובה אמיתית.</p>
+      </div>
+      <!-- 5 -->
+      <div class="wcard rv d2">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14M15.54 8.46a5 5 0 010 7.07M8.46 8.46a5 5 0 000 7.07"/></svg>
+        </div>
+        <h3 class="wtitle">ציוד אבחון מתקדם</h3>
+        <p class="wdesc">עובדים עם מערכות מחשב מקצועיות לכל הדגמים וחלקים מאושרים. לא שמים ציוד ישן על רכב חדש.</p>
+      </div>
+      <!-- 6 -->
+      <div class="wcard rv d3">
+        <div class="wicon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="wtitle">זמינות ומהירות</h3>
+        <p class="wdesc">הרכב שלכם הוא כלי עבודה — לא מותרות. מתאמצים תמיד לתת תשובה מהירה ולהחזיר אתכם לדרך.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ REVIEWS ═══════════════ -->
+<section id="reviews" data-section="reviews" aria-labelledby="rev-h">
+  <div class="inner">
+    <div class="sec-head rv">
+      <span class="tag">מה אומרים עלינו</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="rev-h">הלקוחות <span class="a">מדברים בעצמם</span></h2>
+    </div>
+    <div class="rcards">
+      <!-- ביקורת 1 -->
+      <div class="rcard rv d1">
+        <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+        <p class="rtext">"מגיע לאבי כבר שנים — אני ומשפחתי. אחרי שניסיתי כמה מוסכים אחרים בתל אביב, חזרתי לכאן. פה מסבירים, לא מרמים, ועושים עבודה טובה באמת."</p>
+        <div class="rauthor">
+          <div class="rav" aria-hidden="true">ד</div>
+          <div>
+            <div class="rname">דני לוי</div>
+            <div class="rmeta">לקוח קבוע · 9 שנים</div>
+          </div>
+        </div>
+        <div class="gbadge" aria-label="ביקורת מאומתת בגוגל">
+          <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z" fill="#4285F4"/></svg>
+          ביקורת מאומתת בגוגל
+        </div>
+      </div>
+      <!-- ביקורת 2 -->
+      <div class="rcard rv d2">
+        <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+        <p class="rtext">"הרכב שלי לא עלה בהתנעה בבוקר לפני עבודה. התקשרתי לאבי, הוא הדריך אותי בטלפון ואחר כך קיבל אותי ביום אותו. תוך שעתיים הרכב חזר לעצמו. שירות אמיתי."</p>
+        <div class="rauthor">
+          <div class="rav" aria-hidden="true">מ</div>
+          <div>
+            <div class="rname">מיכל אברהם</div>
+            <div class="rmeta">לקוחה קבועה · 3 שנים</div>
+          </div>
+        </div>
+        <div class="gbadge" aria-label="ביקורת מאומתת בגוגל">
+          <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z" fill="#4285F4"/></svg>
+          ביקורת מאומתת בגוגל
+        </div>
+      </div>
+      <!-- ביקורת 3 -->
+      <div class="rcard rv d3">
+        <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+        <p class="rtext">"יש לי BMW ואני מאוד בררן לגבי מי נוגע בו. אחרי המלצה מחבר — אבי הפך למוסך הקבוע שלי. מקצועי, מסביר, ולא מוכר לי דברים שלא צריך."</p>
+        <div class="rauthor">
+          <div class="rav" aria-hidden="true">ר</div>
+          <div>
+            <div class="rname">ראובן כהן</div>
+            <div class="rmeta">לקוח קבוע · BMW 5 Series</div>
+          </div>
+        </div>
+        <div class="gbadge" aria-label="ביקורת מאומתת בגוגל">
+          <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z" fill="#4285F4"/></svg>
+          ביקורת מאומתת בגוגל
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq" data-section="faq" aria-labelledby="faq-h" style="background:var(--light)">
+  <div class="inner" style="max-width:780px">
+    <div class="sec-head rv" style="margin-bottom:48px">
+      <span class="tag" style="color:var(--gold)">שאלות נפוצות</span>
+      <div class="divider" style="margin:14px auto 18px"></div>
+      <h2 class="st" id="faq-h" style="color:var(--ltxt)">כבר שאלו אותנו —<br><span style="color:var(--gold)">אז ענינו בכנות</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item rv d1">
+        <button class="faq-q" aria-expanded="false">כמה עולה טיפול שנתי?</button>
+        <div class="faq-a">המחיר תלוי בסוג הרכב ובמה שנדרש. אנחנו תמיד מסבירים ומאשרים מחיר לפני שמתחילים. ללא הפתעות בסוף.</div>
+      </div>
+      <div class="faq-item rv d2">
+        <button class="faq-q" aria-expanded="false">האם אפשר לקבוע תור לאותו יום?</button>
+        <div class="faq-a">לרוב כן, בכפוף לעומס. מומלץ להתקשר בבוקר — ועושים כל מאמץ להכניס אתכם מהר.</div>
+      </div>
+      <div class="faq-item rv d3">
+        <button class="faq-q" aria-expanded="false">האם המוסך מתמחה רק ברכבי יוקרה?</button>
+        <div class="faq-a">לא. אנחנו מטפלים במגוון רחב של רכבים — מרכבים פרטיים רגילים ועד יוקרה והיברידיים. כל רכב מקבל יחס מקצועי.</div>
+      </div>
+      <div class="faq-item rv d4">
+        <button class="faq-q" aria-expanded="false">מה כלולה האחריות שאתם נותנים?</button>
+        <div class="faq-a">אחריות בכתב על כל עבודה שבוצעה — חלקים ועבודה. אם משהו לא תקין לאחר הטיפול, חוזרים אלינו ואנחנו מטפלים.</div>
+      </div>
+      <div class="faq-item rv d1">
+        <button class="faq-q" aria-expanded="false">האם אפשר לדבר עם אבי ישירות?</button>
+        <div class="faq-a">בהחלט. אבי נמצא במוסך כל יום ונגיש לשאלות. זה לא מוסך שרץ לבד — הבעלים נוכח ומעורב.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact" data-section="contact" aria-labelledby="con-h">
+  <div class="inner">
+    <div class="rv" style="margin-bottom:56px">
+      <span class="tag">מיקום ויצירת קשר</span>
+      <div class="divider"></div>
+      <h2 class="st" id="con-h">אנחנו ממתינים לך —<br><span class="a" data-txt="address">בן שמן 5, תל אביב</span></h2>
+    </div>
+    <div class="contact-grid">
+      <!-- Info -->
+      <div>
+        <div class="cdet rv">
+          <div class="cdet-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+          </div>
+          <div>
+            <div class="cdet-lbl">טלפון</div>
+            <div class="cdet-val"><a href="tel:03-6877439" data-href-phone>03-6877439</a></div>
+          </div>
+        </div>
+        <div class="cdet rv d1">
+          <div class="cdet-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4.418-4.418-7-7.582-7-11a7 7 0 0114 0c0 3.418-2.582 6.582-7 11z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="cdet-lbl">כתובת</div>
+            <div class="cdet-val">בן שמן 5, תל אביב</div>
+          </div>
+        </div>
+        <div class="cdet rv d2">
+          <div class="cdet-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="cdet-lbl">שעות פעילות</div>
+            <div class="cdet-val" data-txt="hours-weekdays">ראשון–חמישי: 07:30–17:00</div>
+            <div class="cdet-sub" data-txt="hours-friday">שישי: 07:00–13:00 | שבת: סגור</div>
+          </div>
+        </div>
+        <div class="cbtns rv d3">
+          <!-- Desktop: מספר טלפון בולט -->
+          <div class="contact-phone-display">
+            <div class="contact-phone-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+            </div>
+            <div>
+              <div class="contact-phone-label">לתיאום תור ושאלות</div>
+              <div class="contact-phone-num" data-txt="phone">03-6877439</div>
+            </div>
+          </div>
+          <!-- Mobile: כפתורים -->
+          <a href="tel:03-6877439" data-href-phone class="btn-red contact-mobile-btn" aria-label="התקשר למוסך אבי צלח">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81 19.79 19.79 0 01.46 2.18 2 2 0 012.47 0h3.04a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.88-.88a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 15.5v1.42z"/></svg>
+            התקשר עכשיו
+          </a>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="map-box rv d2">
+        <iframe
+          src="https://maps.google.com/maps?q=%D7%91%D7%9F+%D7%A9%D7%9E%D7%9F+5+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          title="מפת מיקום מוסך אבי צלח – בן שמן 5 תל אביב"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer role="contentinfo">
+  <div class="foot-inner">
+    <p class="foot-copy">© 2024 <em>מוסך אבי צלח</em>. כל הזכויות שמורות.</p>
+    <p class="foot-copy">בן שמן 5, תל אביב | <a href="tel:03-6877439" data-href-phone>03-6877439</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════════ WHATSAPP FAB ═══════════════ -->
+<a
+  href="https://wa.me/972548372299?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8"
+  data-href-wa
+  class="wa-fab"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="שלח הודעה ב-WhatsApp למוסך אבי צלח"
+>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══════════════ WAZE FAB ═══════════════ -->
+<a
+  href="#"
+  class="waze-fab"
+  id="wazeFab"
+  aria-label="נווט ב-Waze לבן שמן 5 תל אביב"
+>
+  <img
+    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QBWRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAITAAMAAAABAAEAAAAAAAAAAAEsAAAAAQAAASwAAAAB/+0ALFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAPHAFaAAMbJUccAQAAAgAEAP/hDW9odHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0nYWRvYmU6bnM6bWV0YS8nIHg6eG1wdGs9J0ltYWdlOjpFeGlmVG9vbCAxMi40MCc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp0aWZmPSdodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyc+CiAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICA8dGlmZjpYUmVzb2x1dGlvbj4zMDAvMTwvdGlmZjpYUmVzb2x1dGlvbj4KICA8dGlmZjpZUmVzb2x1dGlvbj4zMDAvMTwvdGlmZjpZUmVzb2x1dGlvbj4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvJz4KICA8eG1wOkNyZWF0b3JUb29sPkFkb2JlIFN0b2NrIFBsYXRmb3JtPC94bXA6Q3JlYXRvclRvb2w+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnhtcE1NPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vJz4KICA8eG1wTU06RG9jdW1lbnRJRD54bXAuaWlkOmQ4MTkzOWQ0LWFmNjgtNDBkYy1iYmJjLWU4YzVmYTNlNGJiNDwveG1wTU06RG9jdW1lbnRJRD4KICA8eG1wTU06SW5zdGFuY2VJRD5hZG9iZTpkb2NpZDpzdG9jazpiZTE3NWFmMi0wY2E2LTQ5ZGYtYTFmNC1lMzFmYzBhOGM5ODE8L3htcE1NOkluc3RhbmNlSUQ+CiAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpzdG9jazoxNzA4NTkwNjIyPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiA8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0ndyc/Pv/bAEMA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"
+    alt="Waze"
+    width="54"
+    height="54"
+    style="display:block;border-radius:50%;object-fit:cover"
+  >
+</a>
+
+
+<script>
+(function(){
+  // ── Navbar scroll ──
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>55)}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // ── Hamburger / mobile menu ──
+  var hbg=document.getElementById('hbg'),nl=document.getElementById('navLinks');
+  hbg.addEventListener('click',function(){
+    var open=nl.classList.toggle('open');
+    hbg.classList.toggle('active',open);
+    hbg.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  nl.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nl.classList.remove('open');
+      hbg.classList.remove('active');
+      hbg.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+
+  // ── Hero parallax ──
+  var hbgEl=document.getElementById('hbg-bg');
+  window.addEventListener('scroll',function(){
+    hbgEl.style.transform='scale(1.06) translateY('+(window.scrollY*.28)+'px)';
+  },{passive:true});
+
+  // ── Scroll reveal ──
+  var rvEls=document.querySelectorAll('.rv');
+  var rvObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('show');rvObs.unobserve(e.target)}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -36px 0px'});
+  rvEls.forEach(function(el){rvObs.observe(el)});
+
+  // ── Counter animation ──
+  var ctrs=document.querySelectorAll('[data-target]');
+  var ctrObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,target=+el.dataset.target,plus=el.dataset.plus,dur=1600,step=14;
+      var inc=target/(dur/step),cur=0;
+      var t=setInterval(function(){
+        cur+=inc;
+        if(cur>=target){
+          el.textContent=(target>=1000?target.toLocaleString('he-IL'):target)+(plus?'+':'+'  );
+          clearInterval(t);
+        }else{
+          el.textContent=Math.floor(cur)>=1000?Math.floor(cur).toLocaleString('he-IL'):Math.floor(cur);
+        }
+      },step);
+      ctrObs.unobserve(el);
+    });
+  },{threshold:.6});
+  ctrs.forEach(function(c){ctrObs.observe(c)});
+
+  // ── Waze deep link — פותח אפליקציה ישירות ──
+  var wazeFab=document.getElementById('wazeFab');
+  if(wazeFab){
+    wazeFab.addEventListener('click',function(e){
+      e.preventDefault();
+      var addr=encodeURIComponent('בן שמן 5 תל אביב');
+      var appUrl='waze://?q='+addr+'&navigate=yes';
+      var webUrl='https://waze.com/ul?q='+addr+'&navigate=yes';
+      var iframe=document.createElement('iframe');
+      iframe.style.cssText='display:none;position:fixed';
+      document.body.appendChild(iframe);
+      try{iframe.contentWindow.location.href=appUrl;}catch(err){}
+      iframe.src=appUrl;
+      // fallback לדפדפן אחרי 1.5 שניות
+      var t=setTimeout(function(){
+        window.open(webUrl,'_blank');
+      },1500);
+      // אם האפליקציה נפתחה — ביטול ה-fallback
+      window.addEventListener('blur',function onBlur(){
+        clearTimeout(t);
+        window.removeEventListener('blur',onBlur);
+      });
+      setTimeout(function(){document.body.removeChild(iframe)},3000);
+    });
+  }
+
+  // ── Admin settings loader ──
+  (function applyAdmin(){
+    var s;
+    try{s=JSON.parse(localStorage.getItem('mossek_admin')||'{}')}catch(e){s={}}
+    // sections visibility
+    if(s.sections){
+      Object.keys(s.sections).forEach(function(id){
+        var el=document.querySelector('[data-section="'+id+'"]');
+        if(el) el.style.display=s.sections[id]?'':'none';
+      });
+    }
+    // texts
+    if(s.texts){
+      Object.keys(s.texts).forEach(function(id){
+        var els=document.querySelectorAll('[data-txt="'+id+'"]');
+        els.forEach(function(el){el.textContent=s.texts[id]});
+        // also update href for phone/wa
+        if(id==='phone'){
+          document.querySelectorAll('[data-href-phone]').forEach(function(a){
+            a.href='tel:'+s.texts[id].replace(/[^0-9]/g,'');
+          });
+        }
+        if(id==='wa'){
+          document.querySelectorAll('[data-href-wa]').forEach(function(a){
+            a.href='https://wa.me/972'+s.texts[id].replace(/^0/,'').replace(/[^0-9]/g,'')+'?text=%D7%A9%D7%9C%D7%95%D7%9D';
+          });
+        }
+      });
+    }
+    // images
+    if(s.images){
+      Object.keys(s.images).forEach(function(id){
+        if(!s.images[id])return;
+        if(id==='hero-bg'){
+          var bg=document.getElementById('hbg-bg');
+          if(bg){
+            var cur=bg.style.background||getComputedStyle(bg).background;
+            bg.style.backgroundImage='linear-gradient(170deg,rgba(6,6,8,.55) 0%,rgba(6,6,8,.72) 55%,rgba(6,6,8,.92) 100%), url(\''+s.images[id]+'\')';
+          }
+        } else {
+          var imgEl=document.querySelector('[data-img="'+id+'"]');
+          if(imgEl) imgEl.src=s.images[id];
+        }
+      });
+    }
+  })();
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var expanded=this.getAttribute('aria-expanded')==='true';
+      // close all
+      document.querySelectorAll('.faq-q').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      // open clicked if was closed
+      if(!expanded){
+        this.setAttribute('aria-expanded','true');
+        this.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+  });
+})();
+</script>
+</body>
+</html>
